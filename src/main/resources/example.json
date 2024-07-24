@@ -1,0 +1,44 @@
+{
+  "name": "example-proxy",
+  "hosts": [
+    "example.com:25565",
+    "play.example.com:25565"
+  ],
+  "servers": {
+    "connect": [
+      "example-lobby",
+      "example-play"
+    ],
+    "ping": [
+      "example-lobby"
+    ]
+  },
+  "ping": {
+    "opened": {
+      "favicon": "/home/user/server/icon.png",
+      "description": "Example server description",
+      "version": {
+        "number": 100,
+        "name": "example"
+      },
+      "players": {
+        "max": "60",
+        "online": "{default}",
+        "sample": "{default}"
+      }
+    },
+    "closed": {
+      "favicon": "/home/user/server/icon.png",
+      "description": "Example server description",
+      "version": {
+        "number": 100,
+        "name": "example"
+      },
+      "players": {
+        "current": "{default}",
+        "max": "60",
+        "sample": "{default}"
+      }
+    }
+  }
+}
